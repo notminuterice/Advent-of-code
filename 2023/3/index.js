@@ -49,9 +49,8 @@ function task1() {
     if (isNaN(point[0])) return false
     let adjacentSymbols = points.filter(p => {
       if (!isNaN(p[0])) return false
-      if (Math.abs(p[1] - point[1][0][0]) <= 1 && Math.abs(p[2] - point[1][0][1]) <= 1  || Math.abs(p[1] - point[1][1][0]) <= 1 && Math.abs(p[2] - point[1][1][1]) <= 1) {
-        return true;
-      }
+      if (Math.abs(p[1] - point[1][0][0]) <= 1 && Math.abs(p[2] - point[1][0][1]) <= 1) return true
+      if (Math.abs(p[1] - point[1][1][0]) <= 1 && Math.abs(p[2] - point[1][1][1]) <= 1) return true
     })
     if (adjacentSymbols.length > 0) {
       return true
